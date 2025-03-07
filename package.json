@@ -1,0 +1,23 @@
+{
+  "name": "sticknotes",
+  "version": "1.0.0",
+  "description": "Projeto de notas autoadesivas (estilo post-it) usando o framework electron e o banco de dados MongoDB",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brudorea/sticknotes.git"
+  },
+  "author": "Bruno Henrique",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brudorea/sticknotes/issues"
+  },
+  "homepage": "https://github.com/brudorea/sticknotes#readme",
+  "devDependencies": {
+    "electron": "^34.3.0"
+  }
+}
