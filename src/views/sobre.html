@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
-    <style>
-        /* Resetando margens e preenchimento padrão */
+    <!-- Impedir a execução de scripts externos -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <!--style>
+        /* Resetando margens e preenchimento padrão 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Remover rolagem da página */
+        /* Remover rolagem da página 
         html, body {
             overflow: hidden;
         }
@@ -52,7 +55,7 @@
             margin-top: 20px;
         }
 
-        /* Estilo para o container principal */
+        /* Estilo para o container principal 
         .container {
             max-width: 600px;
             margin: 0 auto;
@@ -63,14 +66,14 @@
             text-align: center;
         }
 
-        /* Estilo para as seções */
+        /* Estilo para as seções 
         .footer {
             margin-top: 30px;
             font-size: 0.9rem;
             color: #95a5a6;
         }
 
-        /* Estilo de links, se necessário */
+        /* Estilo de links, se necessário 
         a {
             text-decoration: none;
             color: #2980b9;
@@ -79,19 +82,24 @@
         a:hover {
             text-decoration: underline;
         }
+        */
 
-    </style>
+    </style-->
 </head>
 <body>
     <div class="container">
-        <h2>Cadastro</h2>
-        <h3>Notas adesivas interativas</h3>
-        <h4>Autor: Bruno Henrique</h4>
-        <h4>Sob a licença MIT</h4>
-        <p>Versão 1.0</p>
-        <div class="footer">
-            <p>Desenvolvido com ⭐ por Bruno Henrique</p>
-        </div>
+        <section id="sobre">
+            <h2>Cadastro</h2>
+            <h3>Notas adesivas interativas</h3>
+            <h4>Autor: Bruno Henrique</h4>
+            <p>Sob a licença MIT</p>
+            <p>Versão 1.0</p>
+            <button type="button" onclick="fechar()">OK</button>
+            <!--p>Desenvolvido com ⭐ por Bruno Henrique</p-->
+        </section>
     </div>
+
+    <!--Renderizador da tela sobre-->
+    <script src="rendererSobre.js"></script>
 </body>
 </html>

@@ -23,9 +23,11 @@ const conectar = async () => {
         try {
             await mongoose.connect(url) // Conectar
             conectado = true //setar a variável
-            console.log('MongoDB Conectado')            
+            console.log("MongoDB Conectado")   
+            return true // Verificação para o main         
         } catch (error) {
             console.log(error)    
+            return false
         }
     }
 }
@@ -38,7 +40,7 @@ const desconectar = async () => {
         try {
             await mongoose.disconnect(url) // Desconectar
             conectado = false //setar a variável
-            console.log('MongoDB Desconectado')
+            console.log("MongoDB Desconectado")
             
         } catch (error) {
             console.log(error)    
