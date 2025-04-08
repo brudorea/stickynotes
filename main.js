@@ -213,13 +213,19 @@ const template = [
   }
 ]
 
-// ============================================================================================================
+// ======================================================
 // ==================== CRUD Create =====================
 
 // Recebimento do objeto que contem os dados da nota
 ipcMain.on('create-note', async (event, stickyNote) => {
   // IMPORTANTE! Teste de recebimento do objeto (Passo 2)
   console.log(stickyNote)
+  // Uso do try-catch para tratamento de excessões
+  try {
+
+  } catch (error) {
+    console.log(error)
+  }
   // Criar uma nova estrutura de dados para salvar no banco
   // Atenção! Os atributos da estrutura precisam ser idênticos ao modelo e os valores são obtidos atraves do objeto stickynote  
   const newNote = noteModel ({
@@ -234,4 +240,28 @@ ipcMain.on('create-note', async (event, stickyNote) => {
 
 
 // ================= FIM CRUD Create ====================
-// ============================================================================================================
+// ======================================================
+
+// =======================================================================================================
+
+// ======================== CRUD READ ======================== //
+// =========================================================== //
+
+// PASSO 2: Receber o renderer o pedido para listar as notas e fazer a busca no banco de dados
+ipcMain.on('list-notes', async (event) => {
+  //console.log("Teste IPC [list-notes]")//
+  try {
+    // PASSO 3: obter do banco a listagem de notas cadastradas
+    const notes = await noteModel.find()
+    console.log(notes) // teste do passo 3
+    // PASSO 4: enviar ao renderer a listagem das notas
+    // obs: IPC (string) | banco (JSON) (é necessário conversão usando JSON.stringify())
+    // event.reply() resposta a solicitação (específica do solicitante)
+    event.reply('render-notes', JSON.stringify(notes)) 
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+// ==================== FIM - CRUD READ ====================== //
+// =========================================================== //
