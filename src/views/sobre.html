@@ -1,105 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
-    <!-- Impedir a execução de scripts externos -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <title>Sobre</title>
+
     <link rel="stylesheet" href="../public/css/style.css">
-    <!--style>
-        /* Resetando margens e preenchimento padrão 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Remover rolagem da página 
-        html, body {
-            overflow: hidden;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            padding: 15px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 1.0rem;
-            color: #cc1b1b;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        h4 {
-            font-size: 1rem;
-            color: #7f8c8d;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1rem;
-            color: #34495e;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Estilo para o container principal 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        /* Estilo para as seções 
-        .footer {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: #95a5a6;
-        }
-
-        /* Estilo de links, se necessário 
-        a {
-            text-decoration: none;
-            color: #2980b9;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-        */
-
-    </style-->
 </head>
+
 <body>
     <div class="container">
         <section id="sobre">
-            <h2>Cadastro</h2>
+            <h2>Sticky Notes</h2>
             <h3>Notas adesivas interativas</h3>
-            <h4>Autor: Bruno Henrique</h4>
+            <p>Autor: Bruno Henrique</p>
             <p>Sob a licença MIT</p>
             <p>Versão 1.0</p>
-            <button type="button" onclick="fechar()">OK</button>
-            <!--p>Desenvolvido com ⭐ por Bruno Henrique</p-->
+            <button type="button" onclick="exit()">OK</button>
         </section>
     </div>
 
-    <!--Renderizador da tela sobre-->
+
     <script src="rendererSobre.js"></script>
 </body>
+
 </html>

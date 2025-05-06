@@ -1,7 +1,7 @@
 {
   "name": "sticknotes",
   "version": "1.0.0",
-  "description": "Projeto de notas autoadesivas (estilo post-it) usando o framework electron e o banco de dados MongoDB",
+  "description": "Projeto de notas autoadesivas (estilo post-it) usando o framewrok Electron e o banco de dados MongoDB",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brudorea/sticknotes.git"
+    "url": "git+https://github.com/professorjosedeassis/sticknotes.git"
   },
-  "author": "Bruno Henrique",
+  "author": "Professor José de Assis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brudorea/sticknotes/issues"
+    "url": "https://github.com/professorjosedeassis/sticknotes/issues"
   },
-  "homepage": "https://github.com/brudorea/sticknotes#readme",
+  "homepage": "https://github.com/professorjosedeassis/sticknotes#readme",
   "devDependencies": {
     "electron": "^34.3.0"
   },

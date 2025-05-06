@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Impedir a execução de scripts externos -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
-    <!-- Título da janela -->
-    <title>Nota</title>
-    <!-- Bootstrap -->
-    <!--link rel="stylesheet" href="../public/css/bootstrap.min.css"-->
-    <!--CSS personalizado ATENÇÃO!!! sempre após o css do bootstrap-->
+    <title>Sticky Notes</title>
+
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
@@ -19,7 +15,7 @@
         <section class="novaNota">
             <h1>Nova nota</h1>
             <form id="frmNote">
-                <input type="text" placeholder="Escreva sua nota..." required id="inputNote">
+                <input type="text" placeholder="Escreva sua nota..." required id="inputNote" maxlength="60">
                 <h2>Escolha a cor</h2>
                 <select id="selectColor">
                     <option value="amarelo">Amarelo</option>
@@ -33,12 +29,8 @@
         </section>
     </div>
 
-    <!--script src="../public/js/bootstrap.min.js"></script-->
 
-    <!--Processo de renderização-->
     <script src="rendererNota.js"></script>
-
-
 </body>
 
 </html>
